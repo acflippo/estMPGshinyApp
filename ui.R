@@ -18,8 +18,10 @@ shinyUI(pageWithSidebar(
         submitButton("Submit")
     ),
     mainPanel(
-        h3('How to use this calulator'),
-        p("To get an estimate to your vehicle's city and highway miles-per-gallon, specify the engine type, number of cylinders, horsepower, engine displacement, drive train type, transmission type and weight on the left and click Submit."),
+        
+        h3("Estimate the MPG of your newly re-designed vehicle here"),
+        
+        p("To get an estimate to a vehicle's city and highway miles-per-gallon, specify the engine type, number of cylinders, horsepower, engine displacement, drive train type, transmission type and weight on the left and click Submit."),
                 
         h4('City MPG: '),
         verbatimTextOutput("ocitympg_id"),
@@ -28,7 +30,8 @@ shinyUI(pageWithSidebar(
         verbatimTextOutput("ohwympg_id"),
         
         br(),br(),
-        strong("Note:"), "Predictive algorithm was created using a linear regression model on data from",
+        strong("Note:"), "Predictive algorithm was created using a", a("linear regression model", href="https://github.com/acflippo/mpg_presentation/tree/gh-pages"),
+        "on data from",
         a("Kiplinger's 2014 New Car Rankings: Compare Costs, Performance Data publication.", href = "http://www.kiplinger.com/tool/cars/T011-S001-2012-new-car-rankings-compare-costs-performance-da/index.php?table=all&mfr=&filter=all?id=all")
 
     )
